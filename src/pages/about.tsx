@@ -1,5 +1,7 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import Reveal from '../components/Reveal';
+import Footer from '../components/Footer';
 
 export default function AboutPage() {
   return (
@@ -10,6 +12,18 @@ export default function AboutPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
+      <nav className="px-4 py-6">
+        <div className="max-w-6xl mx-auto flex justify-between items-center">
+          <Link href="/" className="text-xl font-semibold text-black dark:text-white hover:text-blue-500 transition-colors">
+            Gale Media
+          </Link>
+          <Link href="/" className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+            Home
+          </Link>
+        </div>
+      </nav>
+
       <main className="min-h-screen px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <Reveal>
@@ -69,6 +83,8 @@ export default function AboutPage() {
           </Reveal>
         </div>
       </main>
+
+      <Footer />
     </>
   );
 }
